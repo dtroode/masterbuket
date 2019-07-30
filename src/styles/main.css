@@ -1,0 +1,377 @@
+:root {
+  --main-dark: #283037;
+  --main-light: #ffffff;
+
+  --accent-red: #ee2f36;
+  --accent-pink: #ffcfcc;
+
+  --primary-padding: 2.5rem;
+  --secondary-padding: 1rem;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: url("/src/fonts/Helvetica-Bold.woff") format("woff");
+}
+
+h1 {
+  font-size: 5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  line-height: 1.125em;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.4em;
+}
+
+a,
+button,
+article.bouquets_list_item,
+article.bouquets_list_item img,
+svg,
+section.footer_mapContainer h2 {
+  transition: all cubic-bezier(0.26, 0.52, 0.13, 0.9) 0.4s;
+}
+
+a,
+button,
+article.bouquets_list_item-top,
+article.bouquets_list_item-top img,
+svg {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--accent-red);
+}
+
+img {
+  border-width: var(--secondary-padding);
+  border-style: solid;
+  width: calc(100% - 2rem);
+}
+
+img,
+button {
+  box-shadow: 0 10px 20px rgba(39, 39, 39, 0.5);
+}
+
+button {
+  display: inherit;
+  height: 3rem;
+  margin-top: var(--primary-padding);
+  padding: 0 0.5rem;
+  line-height: 2.5rem;
+  border: 0.25rem solid var(--main-dark);
+  font-size: 1.5rem;
+  background-color: var(--accent-red);
+  color: var(--main-dark);
+}
+
+button:hover {
+  border-bottom: 2.75rem solid var(--main-dark);
+  color: var(--accent-red);
+}
+
+span {
+  font-size: 1.25rem;
+  line-height: 1.4em;
+}
+
+span.big {
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  z-index: 0;
+  text-transform: uppercase;
+  line-height: 1em;
+  font-size: 10rem;
+  opacity: 0.25;
+  user-select: none;
+}
+
+html,
+button {
+  font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: -0.02;
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+}
+
+header,
+main section,
+footer {
+  display: grid;
+}
+
+header {
+  min-height: calc(100vh - 2 * var(--primary-padding));
+  color: var(--main-dark);
+}
+
+footer {
+  padding: 0 var(--primary-padding) var(--primary-padding)
+    var(--primary-padding);
+}
+
+header,
+section.main_c,
+section.main_bouquets,
+section.main_bouquets_list,
+footer {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: var(--primary-padding);
+}
+
+header,
+section.main_c,
+section.main_bouquets,
+footer {
+  position: relative;
+}
+
+header,
+section.main_c,
+section.main_bouquets {
+  padding: var(--primary-padding);
+}
+
+header img,
+section.main_who img,
+section.main_bouquets img,
+section.main_where img,
+section.footer_mapContainer img {
+  border-color: var(--main-dark);
+}
+
+header section.header_cont {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+section.header_cont_best section {
+  display: grid;
+}
+
+header section.header_links {
+  position: relative;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+header section.header_links img,
+img.main_who_bg {
+  height: calc(100% - 2rem);
+  object-fit: cover;
+}
+
+section.header_links_icons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate3d(0, -50%, 0);
+}
+
+section.header_links_icons a svg {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  fill: var(--main-dark);
+}
+
+section.header_links_icons a:not(:last-child) svg {
+  margin-right: 0.25rem;
+}
+
+section.header_links_icons a svg:hover {
+  fill: var(--accent-red);
+}
+
+section.main_who {
+  background-color: var(--accent-red);
+  color: var(--main-dark);
+}
+
+section.main_c_c {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: var(--primary-padding);
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+section.main_c_c > * {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+section.header_cont_best section,
+section.main_c_c_i {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--primary-padding);
+}
+
+section.main_why {
+  background-color: var(--main-dark);
+  color: var(--accent-red);
+}
+
+section.main_why_image {
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+section.main_why > h2,
+section.main_why_images {
+  grid-column-start: 1;
+}
+
+section.main_why img {
+  border-color: var(--accent-red);
+}
+
+section.main_why h2,
+section.footer_mapContainer h2 {
+  position: absolute;
+  z-index: 1;
+  top: calc(var(--primary-padding) + var(--secondary-padding));
+  left: calc(var(--primary-padding) + var(--secondary-padding));
+  width: calc(100% - 2 * (var(--primary-padding) + var(--secondary-padding)));
+}
+
+section.main_why_quote,
+section.main_why_quote span:nth-of-type(2) {
+  position: relative;
+  z-index: 1;
+}
+
+section.main_why_quote span:nth-of-type(2) {
+  font-style: italic;
+}
+
+section.main_bouquets_list,
+section.footer_mapContainer {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+section.footer_mapContainer {
+  position: relative;
+}
+
+section.main_bouquets_list {
+  width: 100%;
+}
+
+section.main_bouquets {
+  background-color: var(--accent-pink);
+  color: var(--main-dark);
+}
+
+section.main_bouquets h2 {
+  margin-bottom: 0;
+}
+
+section.main_bouquets_list {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+section.main_bouquets_list article.bouquets_list_item {
+  position: relative;
+  top: 1rem;
+  opacity: 0;
+}
+
+section.main_where {
+  background-color: var(--main-light);
+  color: var(--main-dark);
+}
+
+section.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section.footer_mapContainer h2 {
+  color: var(--accent-pink);
+}
+
+section.footer_mapContainer:hover h2 {
+  opacity: 0;
+}
+
+article.bouquets_list_item img {
+  margin-bottom: 0.5rem;
+}
+
+article.bouquets_list_item-top img:hover {
+  border-width: 1.25rem;
+  width: calc(100% - 2.5rem);
+}
+
+article.bouquets_list_item span {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  line-height: 1.25em;
+}
+
+article.bouquets_list_item span.item_cost {
+  text-align: right;
+}
+
+@media screen and (max-width: 1000px) {
+  header,
+  section.main_c,
+  section.main_bouquets,
+  section.main_bouquets_list,
+  section.main_c_c {
+    grid-template-columns: 1fr 1fr;
+  }
+  header section.header_cont,
+  header section.header_links,
+  header section.header_links img,
+  img.main_who_bg {
+    grid-column-start: 1;
+  }
+  header section.header_cont,
+  header section.header_links,
+  header section.header_links,
+  section.main_c_c,
+  section.main_why_image,
+  section.main_bouquets_list,
+  header section.header_links img,
+  img.main_who_bg {
+    grid-column-end: 3;
+  }
+  header section.header_links img,
+  img.main_who_bg {
+    height: unset;
+  }
+}

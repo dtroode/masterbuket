@@ -1,0 +1,49 @@
+@media screen and (max-width: 700px) {
+  :root {
+    --primary-padding: 1.75rem;
+    --secondary-padding: 0.5rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  header,
+  section.main_c,
+  section.main_bouquets,
+  section.main_bouquets_list,
+  section.main_c_c,
+  section.main_c_c_i,
+  section.header_cont_best section {
+    grid-template-columns: 1fr;
+  }
+  header section.header_cont,
+  header section.header_links {
+    grid-column-start: 1;
+  }
+  header section.header_cont,
+  header section.header_links,
+  header section.header_links,
+  section.main_c_c,
+  section.main_bouquets_list,
+  section.main_why_image,
+  section.main_c_c > *,
+  header section.header_links img,
+  img.main_who_bg {
+    grid-column-end: 2;
+  }
+  header section.header_links img,
+  img.main_who_bg,
+  img,
+  section.main_where_inf section {
+    width: calc(100% - 1rem);
+  }
+  article.bouquets_list_item img:hover {
+    border-width: 0.75rem;
+    width: calc(100% - 1.5rem);
+  }
+  section.header_cont_best_images article:nth-of-type(2) {
+    display: none;
+  }
+}

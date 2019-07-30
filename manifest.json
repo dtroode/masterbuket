@@ -1,0 +1,30 @@
+{
+  "name": "Мастер Букет",
+  "short_name": "Мастер Букет",
+  "icons": [
+    {
+      "src": "/src/images/logo/logo-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/src/images/logo/logo-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/src/images/logo/logo-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/src/images/logo/logo-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#EE2F36",
+  "theme_color": "#283037"
+}

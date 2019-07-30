@@ -39,7 +39,7 @@
   section.main_where_inf section {
     width: calc(100% - 1rem);
   }
-  article.bouquets_list_item img:hover {
+  article.bouquets_list_item-top img:hover {
     border-width: 0.75rem;
     width: calc(100% - 1.5rem);
   }

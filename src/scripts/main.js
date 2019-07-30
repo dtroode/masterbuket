@@ -46,7 +46,6 @@ function goodsOut(data) {
         data[key].name +
         '`).style.opacity = 1}, 2000)"/>';
       topOut += '<span class="item_name">' + data[key].name + "</span>";
-      topOut += '<span class="item_cost">' + data[key].cost + " ₽" + "</span>";
       topOut += "</article>";
     }
   }

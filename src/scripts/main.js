@@ -27,7 +27,6 @@ function goodsOut(data) {
       data[key].name +
       '" />';
     out += '<span class="item_name">' + data[key].name + "</span>";
-    out += '<span class="item_cost">' + data[key].cost + " ₽" + "</span>";
     out += "</article>";
   }
 

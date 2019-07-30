@@ -46,4 +46,8 @@
   section.header_cont_best_images article:nth-of-type(2) {
     display: none;
   }
+  section.footer_mapContainer img {
+    object-fit: cover;
+    min-height: 250px;
+  }
 }

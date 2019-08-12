@@ -10,11 +10,11 @@
 }
 
 @font-face {
-  font-family: "Helvetica";
+  font-family: "Inter";
   font-weight: bold;
   font-style: normal;
   font-display: swap;
-  src: url("/src/fonts/Helvetica-Bold.woff") format("woff");
+  src: url("/src/fonts/Inter-Bold.woff2?v=3.5") format("woff2");
 }
 
 h1 {
@@ -112,7 +112,7 @@ span.big {
 
 html,
 button {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Inter, Helvetica, Arial, sans-serif;
   letter-spacing: -0.02;
   font-weight: bold;
 }

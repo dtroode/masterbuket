@@ -137,6 +137,10 @@ footer {
     var(--primary-padding);
 }
 
+footer p {
+  margin-bottom: 0;
+}
+
 header,
 section.main_c,
 section.main_bouquets,
@@ -349,6 +353,7 @@ article.bouquets_list_item span.item_cost {
 
 @media screen and (max-width: 1000px) {
   header,
+  footer,
   section.main_c,
   section.main_bouquets,
   section.main_bouquets_list,
@@ -358,16 +363,19 @@ article.bouquets_list_item span.item_cost {
   header section.header_cont,
   header section.header_links,
   header section.header_links img,
+  footer p,
   img.main_who_bg {
     grid-column-start: 1;
   }
   header section.header_cont,
   header section.header_links,
   header section.header_links,
+  header section.header_links img,
+  footer p,
   section.main_c_c,
   section.main_why_image,
   section.main_bouquets_list,
-  header section.header_links img,
+  section.footer_mapContainer,
   img.main_who_bg {
     grid-column-end: 3;
   }

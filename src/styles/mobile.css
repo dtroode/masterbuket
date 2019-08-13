@@ -10,6 +10,7 @@
     font-size: 2rem;
   }
   header,
+  footer,
   section.main_c,
   section.main_bouquets,
   section.main_bouquets_list,
@@ -25,11 +26,13 @@
   header section.header_cont,
   header section.header_links,
   header section.header_links,
+  header section.header_links img,
+  footer p,
   section.main_c_c,
   section.main_bouquets_list,
   section.main_why_image,
   section.main_c_c > *,
-  header section.header_links img,
+  section.footer_mapContainer,
   img.main_who_bg {
     grid-column-end: 2;
   }

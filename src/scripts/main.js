@@ -25,7 +25,7 @@ function goodsOut(data) {
       data[key].name +
       '" id="' +
       data[key].name +
-      '" />';
+      '" loading="lazy"/>';
     out += '<span class="item_name">' + data[key].name + "</span>";
     out += "</article>";
   }
@@ -44,7 +44,7 @@ function goodsOut(data) {
         data[key].name +
         "`).style.opacity = 0.5}, 100);setTimeout(() => {document.getElementById(`" +
         data[key].name +
-        '`).style.opacity = 1}, 2000)"/>';
+        '`).style.opacity = 1}, 2000)" loading="lazy"/>';
       topOut += '<span class="item_name">' + data[key].name + "</span>";
       topOut += "</article>";
     }

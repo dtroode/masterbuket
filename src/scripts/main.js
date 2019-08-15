@@ -75,9 +75,6 @@ window.addEventListener("scroll", function() {
     if (position.top < window.innerHeight && position.bottom >= 0) {
       element.style.opacity = 1;
       element.style.top = 0;
-    } else {
-      element.style.opacity = 0;
-      element.style.top = "1rem";
     }
   });
 });

@@ -1,12 +1,3 @@
-function getJSONData(file, callback) {
-  let rawFile = new XMLHttpRequest();
-  rawFile.open('GET', file);
-  rawFile.send();
-  rawFile.onload = function () {
-    callback(rawFile.responseText);
-  };
-}
-
 function goodsOut(data) {
   let container = document.createElement("section");
   let topContainer = document.createElement("section");
@@ -58,10 +49,11 @@ function goodsOut(data) {
 
 window.addEventListener(
   "load",
-  getJSONData("../../goods.json", function (response) {
-    let data = JSON.parse(response);
-    goodsOut(data);
-  })
+  async () => {
+    let data = await fetch("../../goods.json");
+    let json = await data.json();
+    goodsOut(json);
+  }
 );
 
 window.addEventListener("scroll", function () {

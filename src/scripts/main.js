@@ -1,15 +1,3 @@
-function readTextFile(file, callback) {
-  var rawFile = new XMLHttpRequest();
-  rawFile.overrideMimeType("application/json");
-  rawFile.open("GET", file, true);
-  rawFile.onreadystatechange = function() {
-    if (rawFile.readyState === 4 && rawFile.status == "200") {
-      callback(rawFile.responseText);
-    }
-  };
-  rawFile.send(null);
-}
-
 function goodsOut(data) {
   let container = document.createElement("section");
   let topContainer = document.createElement("section");
@@ -55,19 +43,20 @@ function goodsOut(data) {
   topContainer.classList.add("header_cont_best_images");
   topContainer.innerHTML = topOut.trim();
 
-  document.getElementById("bouquets").appendChild(container);
-  document.getElementById("topBouquets").appendChild(topContainer);
+  bouquets.appendChild(container);
+  topBouquets.appendChild(topContainer);
 }
 
 window.addEventListener(
   "load",
-  readTextFile("../../goods.json", function(text) {
-    var data = JSON.parse(text);
-    goodsOut(data);
-  })
+  async () => {
+    let data = await fetch("../../goods.json");
+    let json = await data.json();
+    goodsOut(json);
+  }
 );
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   var elements = document.querySelectorAll("#bouquets .bouquets_list_item");
 
   elements.forEach(element => {

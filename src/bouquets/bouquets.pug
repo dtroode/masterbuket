@@ -1,0 +1,15 @@
+include bouquets-list.pug
+
+mixin bouquets(list)
+  section.bouquets#bouquets
+    h2 Букеты
+    section.items
+      each item in list
+        article
+          picture
+            source(srcset=item.webp, type="image/webp")
+            img(src=item.jpeg, loading="lazy", alt=item.name)
+          span 
+            | !{item.order}. !{item.name}
+
++bouquets(bouquets)

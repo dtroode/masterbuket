@@ -1,0 +1,181 @@
+:root
+  --main-dark: #102027
+  --main-light: #ffffff
+
+  --accent-red: #f44336
+  --accent-pink: #ff7961
+
+html
+  font-size: 16px
+
+body
+  margin: 0
+
+*
+  box-sizing: border-box
+  scroll-behavior: smooth
+
+header, main > section, footer
+  padding-right: 1.5rem
+  padding-left: 1.5rem
+
+@media screen and (min-width: 1400px)
+  header, main > section, footer
+    padding-right: 9%
+    padding-left: 9%
+
+main > section, footer
+  padding-bottom: 4rem
+
+main > section:not(:first-child)
+  padding-top: 2rem
+
+h1, h2, p, cite, span
+  font-family: Georgia, Times, 'Times New Roman', serif
+
+section > p, footer > p, a
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+h1, h2, section.quotes p, span, b
+  font-weight: 700
+
+h1, h2, section > p, footer > p, section > span
+  display: block
+  max-width: 800px
+
+h2
+  margin-top: 0
+  margin-bottom: 1rem
+
+  line-height: 1
+
+@media screen and (min-width: 901px)
+  h2
+    font-size: 3.375rem
+
+@media screen and (max-width: 900px)
+  h2
+    font-size: 2.25rem
+
+h2 + p, p:first-child
+  margin-top: 0
+
+p
+  margin-top: 1rem
+  margin-bottom: 0
+
+  font-weight: 500
+  line-height: 1.5
+
+a
+  color: inherit
+
+  transition: color ease-in 0.1s
+
+a:hover, a.hovered
+  color: var(--accent-red)
+
+a:focus
+  outline: none
+
+a.bouquets
+  display: block
+  max-width: 250px
+  margin-top: 2rem
+  padding: 0.75rem 1.5rem
+
+  color: var(--main-light)
+  font-weight: 800
+  line-height: 1
+  text-align: center
+  text-decoration: none
+
+  background-color: var(--accent-red)
+
+  transition: background-color ease-in 0.1s, color ease-in 0.1s, box-shadow ease-in 0.1s
+
+a.bouquets:hover
+  color: var(--accent-red)
+
+  background-color: var(--main-dark)
+
+a.bouquets:focus
+  box-shadow: inset 0 0 0 0.25rem var(--main-dark)
+
+a:not(.bouquets):focus
+  color: var(--accent-red)
+
+section.quotes
+  margin-top: 3rem
+
+@media screen and (min-width: 901px)
+  section.quotes
+    column-count: 3
+    column-gap: 1rem
+
+section.quotes blockquote
+  display: inline-block
+  margin-top: 2rem
+  margin-right: 0
+  margin-bottom: 0
+  margin-left: 0
+
+section.quotes p
+  display: block
+
+  font-size: 1.5rem
+  line-height: 1.25
+
+section.quotes cite
+  margin-top: 0.25rem
+
+section.who
+  background-color: var(--accent-red)
+
+section:not(.review)
+  color: var(--main-dark)
+
+section.review
+  background-color: var(--main-dark)
+
+section.review h2, section.review p, section.review cite
+  color: var(--main-light)
+
+img
+  display: block
+  width: 100%
+  margin-top: 1rem
+
+  border: 0.25rem solid var(--main-dark)
+
+cite
+  display: block
+
+section.bouquets
+  background-color: var(--accent-pink)
+
+section.items
+  display: grid
+  grid-gap: 2rem 1rem
+
+section > span
+  margin-top: 2rem
+  padding: 1rem
+
+  font-size: 1.5rem
+
+  border: 0.25rem solid var(--accent-red)
+
+@media screen and (min-width: 901px)
+  section.items
+    grid-template-columns: 1fr 1fr 1fr
+
+section.items article img
+  margin-top: 0
+
+section.items article span
+  display: block
+  margin-top: 0.5rem
+
+  font-size: 1.25rem
+  text-align: center

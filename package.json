@@ -1,0 +1,63 @@
+{
+  "name": "masterbuket",
+  "version": "3.0.0",
+  "description": "Мастер Букет. Студия флористики и дизайна",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.pug --open",
+    "lint": "stylelint src/**/*.sss",
+    "build": "parcel build src/index.pug -d build",
+    "deploy": "npm run check && cd build && now --prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "precss": "^4.0.0",
+    "pug": "^2.0.4",
+    "stylelint": "^13.2.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^4.0.0"
+  },
+  "stylelint": {
+    "plugins": [
+      "stylelint-order"
+    ],
+    "extends": [
+      "stylelint-config-rational-order"
+    ],
+    "rules": {
+      "plugin/rational-order": [
+        true,
+        {
+          "empty-line-between-groups": true
+        }
+      ],
+      "color-named": "never",
+      "order/order": [
+        "declarations",
+        {
+          "type": "at-rule",
+          "name": "media"
+        },
+        {
+          "type": "rule",
+          "selector": "^&::(before|after)"
+        },
+        {
+          "type": "rule",
+          "selector": "^&:\\w"
+        },
+        {
+          "type": "rule",
+          "selector": "^&_"
+        },
+        {
+          "type": "rule",
+          "selector": "^."
+        }
+      ]
+    }
+  }
+}

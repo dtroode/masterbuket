@@ -119,25 +119,61 @@ cite
 
 section.items
   display: grid
-  gap: 2rem 1rem
+  gap: 1rem
 
 section > span
   margin-top: 2rem
-  padding: 1rem
+  font-size: 2.25rem
 
-  font-size: 1.5rem
-
-  border: 0.25rem solid var(--accent-red)
-
-section.items
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+section.items article
+  position: relative
 
 section.items article img
   margin-top: 0
 
 section.items article span
+  position: absolute
   display: block
-  margin-top: 0.5rem
-
-  font-size: 1.25rem
+  padding: 0.5em
+  left: 0.25rem
+  right: 0.25rem
+  bottom: 0.25rem
+  color: var(--main-dark)
+  background-color: var(--main-light)
   text-align: center
+
+@media screen and (max-width: 900px)
+  section.items
+    grid-template-columns: 1fr
+
+@media screen and (min-width: 901px)
+  section.items
+    grid-template-columns: repeat(12, 1fr)
+
+  article.item-4
+    grid-column: span 12
+    grid-row: span 12
+
+  article.item-4 span
+    font-size: 2.5rem
+
+  article.item-3
+    grid-column: span 6
+    grid-row: span 6
+
+  article.item-3 span
+    font-size: 1.75rem
+
+  article.item-2
+    grid-column: span 4
+    grid-row: span 4
+
+  article.item-2 span
+    font-size: 1.5rem
+
+  article.item-1
+    grid-column: span 3
+    grid-row: span 3
+
+  article.item-1 span
+    font-size: 1.25rem

@@ -1,13 +1,19 @@
 include bouquets-list.pug
 
 mixin bouquets(list)
-  section.items#items
-    each item in list
-      article(class=`item-${item.order}`)
-        picture
-          source(srcset=item.webp, type="image/webp")
-          img(src=item.jpeg, loading="lazy", alt=item.name)
-        span 
-          | !{item.name}
-
+    each collection, name in list
+      section
+        h2 
+          | !{name}
+        section.items#items
+          each item in collection
+            article(id=item.source + "-section")
+              picture
+                source(srcset="bouquets/" + item.source + ".webp", type="image/webp")
+                img(src="bouquets/" + item.source + ".jpg", loading="lazy", alt=item.name)
+              span
+                | !{item.name}
+              if item.price
+                span
+                  | !{item.price} ₽
 +bouquets(bouquets)

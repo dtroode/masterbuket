@@ -26,16 +26,14 @@ header, main > section, footer
     padding-right: 9%
     padding-left: 9%
 
-main > section, footer
+footer
+  padding-top: 4rem
   padding-bottom: 4rem
 
-main > section:not(:first-child)
-  padding-top: 2rem
-
-h1, h2, p, cite, span
+h1, h2, cite, input, textarea
   font-family: Georgia, Times, 'Times New Roman', serif
 
-section > p, footer > p, a
+p, a, p span, article span
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
 
 h1, h2, section.quotes p, span, b
@@ -46,18 +44,15 @@ h1, h2, section > p, footer > p, section > span
   max-width: 800px
 
 h2
-  margin-top: 0
+  margin-top: 4rem
   margin-bottom: 1rem
+  font-size: 2rem
+  font-weight: normal
 
   line-height: 1
 
-@media screen and (min-width: 901px)
-  h2
-    font-size: 3.375rem
-
-@media screen and (max-width: 900px)
-  h2
-    font-size: 2.25rem
+section:first-child h2
+  margin-top: 0
 
 h2 + p, p:first-child
   margin-top: 0
@@ -66,7 +61,7 @@ p
   margin-top: 1rem
   margin-bottom: 0
 
-  font-weight: 500
+  font-weight: normal
   line-height: 1.5
 
 a
@@ -96,11 +91,10 @@ section.quotes blockquote
 section.quotes p
   display: block
 
-  font-size: 1.5rem
   line-height: 1.25
 
 section.quotes cite
-  margin-top: 0.25rem
+  margin-top: 0.5rem
 
 section
   color: var(--main-dark)
@@ -109,20 +103,15 @@ img
   display: block
   width: 100%
   margin-top: 1rem
-
-  border: 0.25rem solid var(--main-dark)
+  border-radius: 0.25rem
 
 cite
   display: block
 
 section.items
   display: grid
-  gap: 1rem
-
-section > span
-  margin-top: 2rem
-
-  font-size: 2.25rem
+  gap: 2rem 1rem
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
 
 section.items article
   position: relative
@@ -131,51 +120,18 @@ section.items article img
   margin-top: 0
 
 section.items article span
-  position: absolute
-  right: 0.25rem
-  bottom: 0.25rem
-  left: 0.25rem
-
-  display: block
-  padding: 0.5em
+  font-size: 1.25rem
 
   color: var(--main-dark)
-  text-align: center
 
-  background-color: var(--main-light)
+section.items article span:not(#count)  
+  margin-top: 0.5em
+  display: block
 
-@media screen and (max-width: 900px)
-  section.items
-    grid-template-columns: 1fr
-
-@media screen and (min-width: 901px)
-  section.items
-    grid-template-columns: repeat(12, 1fr)
-
-  article.item-4
-    grid-row: span 12
-    grid-column: span 12
-
-  article.item-4 span
-    font-size: 2.5rem
-
-  article.item-3
-    grid-row: span 6
-    grid-column: span 6
-
-  article.item-3 span
-    font-size: 1.75rem
-
-  article.item-2
-    grid-row: span 4
-    grid-column: span 4
-
-  article.item-2 span
-    font-size: 1.5rem
-
-  article.item-1
-    grid-row: span 3
-    grid-column: span 3
-
-  article.item-1 span
-    font-size: 1.25rem
+section.items article span#count
+  display: inline-block
+  background-color: lightgray
+  vertical-align: bottom
+  height: 2rem
+  line-height: 2rem
+  padding: 0 0.5rem

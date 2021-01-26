@@ -1,22 +1,5 @@
 include bouquets-list.pug
 
-mixin season_bouquets(list)
-    each collection, name in list
-      section.season
-        h2 
-          | !{name}
-        section.items#items
-          each item in collection
-            article(id=item.source + "-section")
-              picture
-                source(srcset="bouquets/" + item.source + ".webp", type="image/webp")
-                img(src="bouquets/" + item.source + ".jpg", loading="lazy", alt=item.name)
-              span
-                | !{item.name}
-              if item.price
-                span
-                  | !{item.price} ₽
-
 mixin bouquets(list)
     each collection, name in list
       section
@@ -34,5 +17,4 @@ mixin bouquets(list)
                 span
                   | !{item.price} ₽
 
-+season_bouquets(season)
 +bouquets(bouquets)

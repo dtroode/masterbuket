@@ -46,8 +46,9 @@ h1, h2, section > p, footer > p, section > span
 h2
   margin-top: 4rem
   margin-bottom: 1rem
-  font-size: 2rem
+
   font-weight: normal
+  font-size: 2rem
 
   line-height: 1
 
@@ -103,6 +104,7 @@ img
   display: block
   width: 100%
   margin-top: 1rem
+
   border-radius: 0.25rem
 
 cite
@@ -110,8 +112,8 @@ cite
 
 section.items
   display: grid
-  gap: 2rem 1rem
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  gap: 2rem 1rem
 
 section.items article
   position: relative
@@ -120,24 +122,15 @@ section.items article img
   margin-top: 0
 
 section.items article span
-  font-size: 1.25rem
+  display: block
+  margin-top: 0.5em
 
   color: var(--main-dark)
-
-section.items article span:not(#count)  
-  margin-top: 0.5em
-  display: block
-
-section.items article span#count
-  display: inline-block
-  background-color: lightgray
-  vertical-align: bottom
-  height: 2rem
-  line-height: 2rem
-  padding: 0 0.5rem
+  font-size: 1.25rem
 
 section.season
-  background-color: var(--accent-red)
-  padding: 1rem 1rem 2rem 1rem
   margin: 0 -1rem
+  padding: 1rem 1rem 2rem 1rem
+
+  background-color: var(--accent-red)
   border-radius: 0.5rem
